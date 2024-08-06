@@ -1,15 +1,13 @@
 String.prototype.isPalindrome = function () {
-    let str = this.toLowerCase();
+    const str = this.toLowerCase();
     return (str === str.split("").reverse().join(""));
 }
 
 
 function getAverageMark(marks) {
-    let totalMarks = 0;
-
-    for (let mark in marks) {
-        totalMarks += marks[mark];
-    }
+    let totalMarks = marks.reduce(function (currSum,currValue) {
+        return currSum + currValue;
+    },0);
 
     let average = totalMarks / marks.length,
         roundedAverage = Math.round(average);
