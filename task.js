@@ -1,12 +1,6 @@
-
 String.prototype.isPalindrome = function () {
-    let str = this.toLowerCase().split("");
-
-    if (str === str.reverse()) {
-        return true;
-    }
-
-    return false;
+    let str = this.toLowerCase();
+    return (str === str.split("").reverse().join(""));
 }
 
 
