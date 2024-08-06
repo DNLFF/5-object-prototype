@@ -5,9 +5,7 @@ String.prototype.isPalindrome = function () {
 
 
 function getAverageMark(marks) {
-    let totalMarks = marks.reduce(function (currSum,currValue) {
-        return currSum + currValue;
-    },0);
+    let totalMarks = marks.reduce( (currSum,currValue) => currSum + currValue, 0);
 
     let average = totalMarks / marks.length,
         roundedAverage = Math.round(average);
